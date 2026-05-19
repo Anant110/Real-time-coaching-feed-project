@@ -32,7 +32,7 @@ export default function Home() {
   const fetchFeeds = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/gfeed"
+        `${process.env.NEXT_PUBLIC_API_URL}/api/gfeed`
       );
 
       setFeeds(res.data.feeds);

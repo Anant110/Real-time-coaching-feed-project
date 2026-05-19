@@ -16,7 +16,7 @@ export default function AdminPage() {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/cfeed",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/cfeed`,
         {
           title,
           message,
